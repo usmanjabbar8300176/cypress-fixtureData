@@ -1,0 +1,14 @@
+{
+  "firstuser": {
+    "username": "standard_user",
+    "password": "secret_sauce"
+  },
+  "seconduser": {
+    "username": "problem_user",
+    "password": "secret_sauce"
+  },
+  "thirduser": {
+    "username": "visual_user",
+    "password": "secret_sauce"
+  }
+}
