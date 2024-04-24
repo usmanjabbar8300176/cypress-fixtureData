@@ -1,31 +1,31 @@
-name : CI/CD for cypress project
+name: CI/CD for cypress project
 
-on: 
+on:
   push:
     branches: [main]
-  workflows_dispatch:
+  workflow_dispatch:
 
-permission:
+permissions:
   contents: write
 
 jobs:  
   build_and_deploy:
-    runs-on: window 10
-    users: action/checkout@v2
-
+    runs-on: windows-10
     steps:
-      name: Checkout repository
-      uses: action/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-      name: Setup Node.js
-      user: action/setup-node@v3
-      with:
-        node-version: 18
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
 
-      name: install dependencies
-      run: npm install
+      - name: Install dependencies
+        run: npm install
 
-      name: Build Project
-      run: npm run build
+      - name: Build Project
+        run: npm run build
 
-      name: Deploy to GitHub pages
+      - name: Deploy to GitHub pages
+        run: |
+          # Add your deployment script here
