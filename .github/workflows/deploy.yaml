@@ -6,8 +6,16 @@ on:
       - main
 
 jobs:  
-  build_and_deploy:
+  Run-Cypress-Tests:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+
+      - name: Run Cypress Test
+        uses: cypress-io/github-action@v4
+
+        
