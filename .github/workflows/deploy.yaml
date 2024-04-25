@@ -1,15 +1,15 @@
-name : CI/CD for cypress project
+name: CI/CD for cypress project
 
-on: 
+on:
   push:
     branches: 
       - main
-
 jobs:  
   build_and_deploy:
-    runs-on: ubantu-latest
-    users: action/checkout@v3
-
+    runs-on: windows-10
     steps:
       name: Checkout repository
       uses: action/checkout@v3
+
+      - name: Checkout repository
+        uses: actions/checkout@v2
